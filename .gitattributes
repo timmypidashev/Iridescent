@@ -1,0 +1,6 @@
+# Properly detect akward header files
+*.h.in linguist-language=cpp
+external/* linguist-vendored
+
+# Normalize EOL for all files that Git considers text files
+* text=auto eol=lf
