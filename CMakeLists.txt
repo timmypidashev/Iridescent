@@ -24,7 +24,7 @@ add_subdirectory(Core)
 
 # Create executable
 # ----------------------------------
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} Tests/main.cpp)
 
 # Set target link libraries
 # ----------------------------------
