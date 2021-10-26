@@ -1,0 +1,4 @@
+// Define versioning macros.
+#define Engine_Version_Major @Engine_VERSION_MAJOR@ 
+#define Engine_Version_Minor @Engine_VERSION_MINOR@
+#define Engine_Version_Patch @Engine_VERSION_PATCH@
