@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.20.0)
 # ----------------------------------
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
-# Set C++ 19 Standard
+# Set C++ 17 Standard
 # ----------------------------------
 set(CMAKE_CXX_STANDARD 17)
 
@@ -14,13 +14,20 @@ set(CMAKE_CXX_STANDARD 17)
 # ----------------------------------
 project(Iridescent VERSION 0.1.0 LANGUAGES C CXX)
 
+# Nice message to calm me down when compiling :)
+# ----------------------------------
+message(STATUS "Configuring ${PROJECT_NAME}: v${PROJECT_VERSION}")
+
 # Configure Header Files
 # ----------------------------------
-configure_file(config.h.in config.h)
+configure_file (
+  "${PROJECT_SOURCE_DIR}/config.h.in"
+  "${PROJECT_BINARY_DIR}/config.h"
+)
 
 # Allow 'config.h' to be used throughout the program
 # ----------------------------------
-include_directories(${PROJECT_BINARY_BIN})
+include_directories(${PROJECT_BINARY_DIR})
 
 # Add compile definitions
 # ----------------------------------
