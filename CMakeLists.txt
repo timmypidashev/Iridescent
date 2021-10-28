@@ -1,6 +1,14 @@
 # Set cmake_mimimum_required
 # ----------------------------------
-cmake_minimum_required(VERSION 3.21.2)
+cmake_minimum_required(VERSION 3.20.0)
+
+# Set makefile properties
+# ----------------------------------
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
+# Set C++ 19 Standard
+# ----------------------------------
+set(CMAKE_CXX_STANDARD 17)
 
 # Set project name and version
 # ----------------------------------
@@ -14,24 +22,23 @@ configure_file(config.h.in config.h)
 # ----------------------------------
 include_directories(${PROJECT_BINARY_BIN})
 
+# Add compile definitions
+# ----------------------------------
+add_compile_definitions(IRID_EXPORTS)
+
 # Run Cmake scripts
 # ----------------------------------
 include(CMake/GetPlatform.cmake)
+
+# Ensure cmake can find our libraries
+# ----------------------------------
+set(LIBRARY_OUTPUT_PATH "${CMAKE_BINARY_DIR}")
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}")
 
 # Add subdirectories
 # ----------------------------------
 add_subdirectory(Core)
 add_subdirectory(Sandbox)
 
-# USE_FOLDERS group cmake generated projects into one (CMakePredefinedTargets) folder
-# ----------------------------------
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-# Add CPack installer which brings all files together (.exe, .lib, .dll, and .h) and put into one file 
-# ----------------------------------
-include(InstallRequiredSystemLibraries)
-set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
-set(CPACK_PACKAGE_VERSION_MAJOR ${Iridescent_VERSION_MAJOR})
-set(CPACK_PACKAGE_VERSION_MINOR ${Iridescent_VERSION_MINOR})
-set(CPACK_PACKAGE_VERSION_PATCH ${Iridescent_VERSION_PATCH})
-include(CPack)
+

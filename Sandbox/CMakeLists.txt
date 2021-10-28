@@ -1,10 +1,6 @@
-# Set cmake_mimimum_required
+# Set project name
 # ----------------------------------
-cmake_minimum_required(VERSION 3.21.2)
-
-# Set project name and version
-# ----------------------------------
-project(Sandbox LANGUAGES C CXX)
+project(Sandbox)
 
 # Create executable
 # ----------------------------------
@@ -12,10 +8,8 @@ add_executable(${PROJECT_NAME} main.cpp)
 
 # Set target link libraries
 # ----------------------------------
-target_link_libraries(${PROJECT_NAME} 
+target_link_libraries(${PROJECT_NAME} PUBLIC
     Core
 )
 
-# Point to which directory Sandbox is copied during installation and packaging
-# ----------------------------------
-install(TARGETS Sandbox DESTINATION sandbox)
+

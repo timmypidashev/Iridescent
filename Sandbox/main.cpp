@@ -1,11 +1,18 @@
+#include <iostream>
 #include "Iridescent.h"
 
-namespace Iridescent
+int main(int argc, char *argv[])
 {
-    __declspec(dllimport) void Run();
-}
-
-void main()
-{
-    Iridescent::Run();
+	
+	Test();
+	
+	std::cout << std::endl;
+	std::cout << "Type any char and press Enter" << std::endl;
+	
+	char c;
+	std::cin >> c;
+	
+	return 0;
+    // wait for keypress
+    std::cin.get();
 }
