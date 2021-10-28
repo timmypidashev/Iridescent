@@ -1,4 +1,10 @@
+#ifndef INCLUDE_GUARD
+#define INCLUDE_GUARD
+
 // Define versioning macros.
-#define Engine_Version_Major @Engine_VERSION_MAJOR@ 
-#define Engine_Version_Minor @Engine_VERSION_MINOR@
-#define Engine_Version_Patch @Engine_VERSION_PATCH@
+#define Iridescent_Version @Iridescent_VERSION@
+#define Iridescent_Version_Major @Iridescent_VERSION_MAJOR@ 
+#define Iridescent_Version_Minor @Iridescent_VERSION_MINOR@
+#define Iridescent_Version_Patch @Iridescent_VERSION_PATCH@
+
+#endif // INCLUDE_GUARD

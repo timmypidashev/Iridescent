@@ -1,10 +1,10 @@
 # Set cmake_mimimum_required
 # ----------------------------------
-cmake_minimum_required(VERSION 3.20.0)
+cmake_minimum_required(VERSION 3.21.2)
 
 # Set project name
 # ----------------------------------
-project(Core)
+project(Core LANGUAGES C CXX)
 
 # Set Library name
 # ----------------------------------
@@ -17,12 +17,6 @@ set(SOURCE_FILES
     Iridescent.h
 )
 
-# cmake config
-# ----------------------------------
-set(BUILD_SHARED_LIBS ON)
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS True)
-
-
 # Add library sources
 # ----------------------------------
 add_library(
@@ -33,5 +27,18 @@ add_library(
 # ----------------------------------
 target_include_directories(
     ${PROJECT_NAME}
-    PUBLIC ${PROJECT_SOURCE_DIR}
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+# List files that install and/or package should provide.
+# Each library should know what it want to distribute,
+# which files are internal or intermediate and which are public library export.
+# ----------------------------------
+install(
+    TARGETS Core 
+    DESTINATION Core-bin
+)
+install(
+    FILES Iridescent.h 
+    DESTINATION Core-include
 )

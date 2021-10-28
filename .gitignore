@@ -42,3 +42,7 @@ _deps
 
 # Build directory
 build
+
+# External Dependencies 
+External/glfw
+External/glm
