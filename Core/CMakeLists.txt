@@ -5,9 +5,11 @@ project(Core)
 # Set library sources
 # ----------------------------------
 set(SOURCE_FILES
-    Iridescent.cpp
+    Application/Application.cpp
+    Application/Application.h 
+    Application/EntryPoint.h 
+    Application/Exports.h
     Iridescent.h
-    Exports.h
 )
 
 # Add library sources

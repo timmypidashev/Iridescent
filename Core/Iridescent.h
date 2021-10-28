@@ -1,5 +1,9 @@
 #pragma once
 
-#include "Exports.h"
+// For use by Iridescent applications
 
-IRID_EXPORT void Test();
+#include "Application/Application.h"
+
+// ---Entry Point---------------------
+#include "Application/EntryPoint.h"
+// -----------------------------------

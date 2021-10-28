@@ -1,18 +1,21 @@
-#include <iostream>
-#include "Iridescent.h"
+#include <Iridescent.h>
 
-int main(int argc, char *argv[])
+class Sandbox : public Iridescent::Application
 {
-	
-	Test();
-	
-	std::cout << std::endl;
-	std::cout << "Type any char and press Enter" << std::endl;
-	
-	char c;
-	std::cin >> c;
-	
-	return 0;
-    // wait for keypress
-    std::cin.get();
+public:
+	Sandbox()
+	{
+
+	}
+
+	~Sandbox()
+	{
+
+	}
+
+};
+
+Iridescent::Application* Iridescent::CreateApplication()
+{
+	return new Sandbox();
 }
