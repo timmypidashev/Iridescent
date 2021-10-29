@@ -15,7 +15,6 @@ namespace Iridescent {
 
 	void Application::Run()
 	{
-		std::cout << "Application Run" << std::endl;
 		while (true);
 	}
 

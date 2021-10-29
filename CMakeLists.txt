@@ -19,7 +19,7 @@ set(IRIDESCENT ${PROJECT_NAME})
 # Configure cmake
 # ----------------------------------
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/CMake")
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)	
 
 # Set options
 # ----------------------------------

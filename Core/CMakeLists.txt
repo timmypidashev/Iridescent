@@ -25,7 +25,7 @@ set(SOURCE_FILES
 # Add library sources
 # ----------------------------------
 add_library(
-    ${PROJECT_NAME} SHARED ${SOURCE_FILES}
+    ${PROJECT_NAME} STATIC ${SOURCE_FILES}
 )
 
 # Add Precompiled Headers
@@ -43,7 +43,3 @@ target_include_directories(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
 	PUBLIC spdlog::spdlog
 )
-
-# Set target properties
-# ----------------------------------
-set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Core)
