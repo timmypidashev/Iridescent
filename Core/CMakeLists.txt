@@ -5,11 +5,21 @@ project(Core)
 # Set library sources
 # ----------------------------------
 set(SOURCE_FILES
+    # Client header file
+    Iridescent.h
+
+    # Predefines
+    Exports.h
+
+    # Application sources
     Application/Application.cpp
     Application/Application.h 
     Application/EntryPoint.h 
-    Application/Exports.h
-    Iridescent.h
+
+    # Logger sources
+    Logger/Log.cpp 
+    Logger/Log.h
+    
 )
 
 # Add library sources
@@ -18,11 +28,16 @@ add_library(
     ${PROJECT_NAME} SHARED ${SOURCE_FILES}
 )
 
-# Expose source files to client application
+# Set Library Includes
 # ----------------------------------
-target_include_directories(
-    ${PROJECT_NAME}
+target_include_directories(${PROJECT_NAME} 
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+    PUBLIC spdlog INTERFACE spdlog/include
+)
+
+# Link External Dependencies to Core
+target_link_libraries(${PROJECT_NAME} 
+    PUBLIC spdlog
 )
 
 # Add Precompiled Headers

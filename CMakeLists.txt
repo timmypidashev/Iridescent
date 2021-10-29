@@ -40,6 +40,7 @@ set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}")
 
 # Add subdirectories
 # ----------------------------------
+add_subdirectory(External)
 add_subdirectory(Core)
 add_subdirectory(Sandbox)
 
