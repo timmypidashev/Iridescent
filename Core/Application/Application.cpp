@@ -1,6 +1,6 @@
-#include "Application.h"
+#include <Iridpch.h>
 
-#include <iostream>
+#include "Application.h"
 
 namespace Iridescent {
 

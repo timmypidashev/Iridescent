@@ -24,3 +24,7 @@ target_include_directories(
     ${PROJECT_NAME}
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+# Add Precompiled Headers
+# ----------------------------------
+target_precompile_headers(${PROJECT_NAME} PRIVATE Iridpch.h)

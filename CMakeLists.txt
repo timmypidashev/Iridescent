@@ -14,10 +14,6 @@ set(CMAKE_CXX_STANDARD 17)
 # ----------------------------------
 project(Iridescent VERSION 0.1.0 LANGUAGES C CXX)
 
-# Nice message to calm me down when compiling :)
-# ----------------------------------
-message(STATUS "Configuring ${PROJECT_NAME}: v${PROJECT_VERSION}")
-
 # Configure Header Files
 # ----------------------------------
 configure_file (
@@ -47,5 +43,7 @@ set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}")
 add_subdirectory(Core)
 add_subdirectory(Sandbox)
 
-
+# Nice message to calm me down when compiling :)
+# ----------------------------------
+message(STATUS "Configuring ${PROJECT_NAME} v${PROJECT_VERSION} for ${CMAKE_SYSTEM_NAME}")
 
