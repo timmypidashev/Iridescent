@@ -3,7 +3,7 @@
 
     // Cmake
     "cmake.buildDirectory": "${workspaceFolder}/Build",
-    "cmake.generator": "Visual Studio 16 2019"
+    "cmake.generator": "Visual Studio 16 2019",
 
     "cmake.configureSettings": {
         "BUILD_EXAMPLES": "OFF"

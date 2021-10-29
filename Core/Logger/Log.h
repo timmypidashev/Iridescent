@@ -27,6 +27,7 @@ namespace Iridescent {
 #define IRID_CORE_WARN(...)     ::Iridescent::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define IRID_CORE_ERROR(...)    ::Iridescent::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define IRID_CORE_CRITICAL(...) ::Iridescent::Log::GetCoreLogger()->critical(__VA_ARGS__)
+#define IRID_CORE_FATAL(...)    ::Iridescent::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
 // Client log macros
 #define IRID_TRACE(...)         ::Iridescent::Log::GetClientLogger()->trace(__VA_ARGS__)
@@ -34,3 +35,4 @@ namespace Iridescent {
 #define IRID_WARN(...)          ::Iridescent::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define IRID_ERROR(...)         ::Iridescent::Log::GetClientLogger()->error(__VA_ARGS__)
 #define IRID_CRITICAL(...)      ::Iridescent::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define IRID_FATAL(...)         ::Iridescent::Log::GetClientLogger()->fatal(__VA_ARGS__)

@@ -7,7 +7,8 @@ extern Iridescent::Application* Iridescent::CreateApplication();
 int main(int argc, char** argv)
 {	
 	Iridescent::Log::Init();
-	Iridescent::Log::GetCoreLogger()->info("Core Logger Initialized");
+	IRID_CORE_INFO("Initialized Core Logger!");
+	IRID_INFO("Initialized Client Logger!");
 
 	auto app = Iridescent::CreateApplication();
 	app->Run();
