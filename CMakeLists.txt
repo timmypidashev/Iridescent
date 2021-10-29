@@ -14,6 +14,18 @@ set(CMAKE_CXX_STANDARD 17)
 # ----------------------------------
 project(Iridescent VERSION 0.1.0 LANGUAGES C CXX)
 
+set(IRIDESCENT ${PROJECT_NAME})
+
+# Configure cmake
+# ----------------------------------
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/CMake")
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+# Set options
+# ----------------------------------
+option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+option(BUILD_EXAMPLES "Build examples" OFF)
+
 # Configure Header Files
 # ----------------------------------
 configure_file (
@@ -29,9 +41,13 @@ include_directories(${PROJECT_BINARY_DIR})
 # ----------------------------------
 add_compile_definitions(IRID_EXPORTS)
 
-# Run Cmake scripts
+# CMake modules
 # ----------------------------------
-include(CMake/GetPlatform.cmake)
+# Standard modules
+include(GenerateExportHeader)
+
+# Own modules
+include(GetPlatform)
 
 # Ensure cmake can find our libraries
 # ----------------------------------

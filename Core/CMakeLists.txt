@@ -28,18 +28,22 @@ add_library(
     ${PROJECT_NAME} SHARED ${SOURCE_FILES}
 )
 
+# Add Precompiled Headers
+# ----------------------------------
+target_precompile_headers(${PROJECT_NAME} PRIVATE Iridpch.h)
+
 # Set Library Includes
 # ----------------------------------
 target_include_directories(${PROJECT_NAME} 
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
-    PUBLIC spdlog INTERFACE spdlog/include
 )
 
-# Link External Dependencies to Core
-target_link_libraries(${PROJECT_NAME} 
-    PUBLIC spdlog
-)
-
-# Add Precompiled Headers
+# Set target link libraries
 # ----------------------------------
-target_precompile_headers(${PROJECT_NAME} PRIVATE Iridpch.h)
+target_link_libraries(${PROJECT_NAME}
+	PUBLIC spdlog::spdlog
+)
+
+# Set target properties
+# ----------------------------------
+set_target_properties(${PROJECT_NAME} PROPERTIES FOLDER Core)
