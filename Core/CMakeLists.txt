@@ -19,7 +19,12 @@ set(SOURCE_FILES
     # Logger sources
     Logger/Log.cpp 
     Logger/Log.h
-    
+
+    # Events sources
+    Events/ApplicationEvents.h 
+    Events/Event.h 
+    Events/KeyEvent.h 
+    Events/MouseEvent.h
 )
 
 # Add library sources

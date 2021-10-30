@@ -18,3 +18,5 @@
 	#endif // defined(__GNUC__) || defined(__APPLE__) || defined(LINUX)
 
 #endif // !defined(IRID_EXPORT)
+
+#define BIT(x) (1 << x)

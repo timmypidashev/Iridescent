@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Exports.h"
+#include "Events/Event.h"
 
 namespace Iridescent {
 
