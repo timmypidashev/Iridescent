@@ -7,3 +7,6 @@
 [submodule "External/spdlog"]
 	path = External/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "External/glad"]
+	path = External/glad
+	url = https://github.com/Dav1dde/glad
