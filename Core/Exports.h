@@ -19,4 +19,12 @@
 
 #endif // !defined(IRID_EXPORT)
 
+#ifdef IRID_ENABLE_ASSERTS
+	#define IRID_ASSERT(x, ...) { if(!(x)) { IRID_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define IRID_CORE_ASSERT(x, ...) { if(!(x)) { IRID_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define IRID_ASSERT(x, ...)
+	#define IRID_CORE_ASSERT(x, ...)
+#endif
+
 #define BIT(x) (1 << x)

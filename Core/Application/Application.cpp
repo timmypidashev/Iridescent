@@ -2,12 +2,15 @@
 
 #include "Application.h"
 #include "Events/ApplicationEvents.h"
-#include "Logger/Log.h"
+
+#include "GLFW/glfw3.h"
+// #include <GL/gl.h>
 
 namespace Iridescent {
 
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 
@@ -17,17 +20,10 @@ namespace Iridescent {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			IRID_TRACE(e);
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			IRID_TRACE(e);
-		}
-
-		while (true);
 	}
 
 }

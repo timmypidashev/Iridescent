@@ -25,6 +25,11 @@ set(SOURCE_FILES
     Events/Event.h 
     Events/KeyEvent.h 
     Events/MouseEvent.h
+
+    # Window
+    Window/Windows.cpp
+    Window/Windows.h
+    Window.h 
 )
 
 # Add library sources
@@ -39,12 +44,14 @@ target_precompile_headers(${PROJECT_NAME} PRIVATE Iridpch.h)
 
 # Set Library Includes
 # ----------------------------------
-target_include_directories(${PROJECT_NAME} 
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+target_include_directories(${PROJECT_NAME} PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 # Set target link libraries
 # ----------------------------------
-target_link_libraries(${PROJECT_NAME}
-	PUBLIC spdlog::spdlog
+target_link_libraries(${PROJECT_NAME} PUBLIC 
+	spdlog::spdlog
+    glfw
+    glad
 )
