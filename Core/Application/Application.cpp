@@ -1,10 +1,8 @@
 #include <Iridpch.h>
 
 #include "Application.h"
-#include "Events/ApplicationEvents.h"
 
 #include "GLFW/glfw3.h"
-// #include <GL/gl.h>
 
 namespace Iridescent {
 
