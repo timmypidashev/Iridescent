@@ -7,5 +7,5 @@
 
     "cmake.configureSettings": {
         "BUILD_EXAMPLES": "OFF"
-    },
+    }
 }
