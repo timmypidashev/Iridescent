@@ -11,7 +11,6 @@ namespace Iridescent {
 		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
-
 	Application::~Application()
 	{
 	}
@@ -21,6 +20,8 @@ namespace Iridescent {
 		while (m_Running)
 		{
 			m_Window->OnUpdate();
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
 		}
 	}
 
