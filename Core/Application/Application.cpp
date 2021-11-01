@@ -1,6 +1,10 @@
+#define GLFW_INCLUDE_NONE
+
 #include <Iridpch.h>
 
 #include "Application.h"
+
+#include <glad/glad.h>
 
 #include "GLFW/glfw3.h"
 
@@ -20,8 +24,6 @@ namespace Iridescent {
 		while (m_Running)
 		{
 			m_Window->OnUpdate();
-			glClearColor(1, 0, 1, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
 		}
 	}
 
