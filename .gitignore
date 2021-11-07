@@ -41,8 +41,4 @@ CTestTestfile.cmake
 _deps
 
 # Build directory
-build
-
-# External Dependencies 
-External/glfw
-External/glm
+Build
