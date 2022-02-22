@@ -5,7 +5,7 @@ project(Core)
 # Set library sources
 # ----------------------------------
 set(SOURCE_FILES
-    # Client header file
+    # Application header
     Iridescent.h
 
     # Predefines
@@ -30,6 +30,12 @@ set(SOURCE_FILES
     Window/Windows.cpp
     Window/Windows.h
     Window.h 
+
+    # Layerstack
+    Layer/Layer.cpp
+    Layer/LayerStack.cpp
+    Layer/Layer.h
+    Layer/LayerStack.h
 )
 
 # Add library sources
