@@ -1,10 +1,10 @@
 # Set project name
 # ----------------------------------
-project(Sandbox)
+project(Iridescent)
 
 # Create executable
 # ----------------------------------
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(Iridescent main.cpp)
 
 # Set target link libraries
 # ----------------------------------
