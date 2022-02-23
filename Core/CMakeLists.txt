@@ -2,6 +2,14 @@
 # ----------------------------------
 project(Core)
 
+# Set compile definitions
+# ----------------------------------
+add_definitions("-pthread")
+
+# Test(try out the 'Threads' package
+# ----------------------------------
+find_package (Threads)
+
 # Set library sources
 # ----------------------------------
 set(SOURCE_FILES
