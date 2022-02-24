@@ -31,3 +31,18 @@ set(GLAD_ALL_EXTENSIONS ON CACHE STRING "" FORCE)
 add_subdirectory(glad)
 set_target_properties(glad PROPERTIES FOLDER External)
 set_target_properties(glad-generate-files PROPERTIES FOLDER External)
+
+# imgui
+# ----------------------------------
+set(imgui_SOURCE_DIR "imgui")
+add_library(
+    imgui
+    ${imgui_SOURCE_DIR}/imgui.cpp
+    ${imgui_SOURCE_DIR}/imgui_draw.cpp
+    ${imgui_SOURCE_DIR}/imgui_widgets.cpp
+)
+
+target_compile_options(
+    imgui PRIVATE
+    -DIMGUI_IMPL_OPENGL_LOADER_GLAD # configure GLAD as the loader
+)
