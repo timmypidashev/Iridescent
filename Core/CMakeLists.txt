@@ -6,9 +6,10 @@ project(Core)
 # ----------------------------------
 add_definitions("-pthread")
 
-# Test(try out the 'Threads' package
+# Easily find required packages
 # ----------------------------------
-find_package (Threads)
+find_package (Threads REQUIRED)
+find_package (OpenGL REQUIRED)
 
 # Set library sources
 # ----------------------------------
@@ -77,4 +78,5 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
     glfw
     glad
     imgui
+    OpenGL::OpenGL
 )

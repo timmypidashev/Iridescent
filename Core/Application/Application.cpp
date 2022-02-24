@@ -1,5 +1,3 @@
-#define GLFW_INCLUDE_NONE
-
 #include <Iridpch.h>
 #include "Logger/Log.h"
 #include "Application.h"
@@ -20,6 +18,10 @@ namespace Iridescent {
 		m_Window->SetEventCallback(BIND_EVENT_FUNCTION(OnEvent));
 	}
 
+    Application::~Application()
+	{
+	}
+
     void Application::PushLayer(Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
@@ -30,10 +32,6 @@ namespace Iridescent {
 	{
 		m_LayerStack.PushOverlay(layer);
         layer->OnAttach();
-	}
-
-	Application::~Application()
-	{
 	}
 
 	void Application::OnEvent(Event& e)
@@ -53,11 +51,11 @@ namespace Iridescent {
 	void Application::Run()
 	{
 		while (m_Running)
-		{   
-			for (Layer* layer : m_LayerStack)
-				layer->OnUpdate();
+		{ 
+		    for (Layer* layer : m_LayerStack)
+			    layer->OnUpdate();
 
-			m_Window->OnUpdate();
+		    m_Window->OnUpdate();
 		}
 	}
 
