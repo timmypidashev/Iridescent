@@ -5,4 +5,5 @@
 #include "Application/Application.h"
 #include "Logger/Log.h"
 #include "Layer/Layer.h"
+#include "ImGui/ImGuiLayer.h"
 #include "Application/EntryPoint.h"

@@ -26,6 +26,7 @@ public:
 	Sandbox()
 	{
         PushLayer(new IridLayer());
+        PushOverlay(new Iridescent::ImGuiLayer());
 	}
 
 	~Sandbox()
