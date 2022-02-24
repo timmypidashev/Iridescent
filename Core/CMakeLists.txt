@@ -44,6 +44,14 @@ set(SOURCE_FILES
     Layer/LayerStack.cpp
     Layer/Layer.h
     Layer/LayerStack.h
+
+    # ImGui
+    ImGui/ImGuiLayer.cpp
+    ImGui/ImGuiLayer.h
+
+    # Platform
+    Platform/OpenGL/ImGuiOpenGLRenderer.h
+
 )
 
 # Add library sources
