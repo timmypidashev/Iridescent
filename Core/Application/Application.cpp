@@ -29,6 +29,7 @@ namespace Iridescent {
 	void Application::PushOverlay(Layer* layer)
 	{
 		m_LayerStack.PushOverlay(layer);
+        layer->OnAttach();
 	}
 
 	Application::~Application()
