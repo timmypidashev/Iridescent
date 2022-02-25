@@ -20,6 +20,9 @@ set(SOURCE_FILES
     # Predefines
     Exports.h
 
+    # Input
+    Input.h
+
     # Application sources
     Application/Application.cpp
     Application/Application.h 
@@ -37,8 +40,10 @@ set(SOURCE_FILES
 
     # Window
     Window/Windows.cpp
+    Window/WindowsInput.cpp
+    Window/WindowsInput.h
     Window/Windows.h
-    Window.h 
+    Window.h
 
     # Layerstack
     Layer/Layer.cpp

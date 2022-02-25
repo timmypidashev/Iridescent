@@ -51,12 +51,12 @@ namespace Iridescent {
 	void Application::Run()
 	{
 		while (m_Running)
-		{ 
+		{
 		    for (Layer* layer : m_LayerStack)
 			    layer->OnUpdate();
 
 		    m_Window->OnUpdate();
-		}
+        }
 	}
 
 	bool Application::OnWindowClose(WindowCloseEvent& e)
