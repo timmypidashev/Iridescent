@@ -1,7 +1,7 @@
 #pragma once	
 
 #include "config.h"
-
+#include "Logger/Log.h"
 #ifdef IRID_EXPORT
 
 extern Iridescent::Application* Iridescent::CreateApplication();
