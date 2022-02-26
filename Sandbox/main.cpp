@@ -10,12 +10,19 @@ public:
 
     void OnUpdate() override
     {
-        IRID_INFO("IridLayer::Update");
+        if (Iridescent::Input::IsKeyPressed(IRID_KEY_TAB))
+			IRID_TRACE("Tab key is pressed (poll)!");
     }
 
     void OnEvent(Iridescent::Event& event) override
     {
-        IRID_TRACE("{0}", event);
+        if (event.GetEventType() == Iridescent::EventType::KeyPressed)
+		{
+			Iridescent::KeyPressedEvent& e = (Iridescent::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == IRID_KEY_TAB)
+				IRID_TRACE("Tab key is pressed (event)!");
+			IRID_TRACE("{0}", (char)e.GetKeyCode());
+		}
     }
 
 };

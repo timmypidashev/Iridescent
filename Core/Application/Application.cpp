@@ -2,6 +2,7 @@
 #include "Logger/Log.h"
 #include "Application.h"
 #include <glad/glad.h>
+#include "Input/Input.h"
 
 namespace Iridescent {
 

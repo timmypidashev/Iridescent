@@ -22,6 +22,8 @@ set(SOURCE_FILES
 
     # Input
     Input/Input.h
+    Input/KeyCodes.h
+    Input/MouseButtonCodes.h
 
     # Application sources
     Application/Application.cpp
