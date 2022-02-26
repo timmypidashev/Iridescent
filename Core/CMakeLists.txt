@@ -21,7 +21,7 @@ set(SOURCE_FILES
     Exports.h
 
     # Input
-    Input.h
+    Input/Input.h
 
     # Application sources
     Application/Application.cpp
