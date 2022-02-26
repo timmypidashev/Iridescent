@@ -86,4 +86,5 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
     glad
     imgui
     OpenGL::OpenGL
+    glm
 )

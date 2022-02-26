@@ -62,3 +62,11 @@ target_include_directories(
         imgui
         imgui/backends
 )
+
+# glm
+# ----------------------------------
+add_library(glm INTERFACE)
+set(GLM_DIR glm)
+target_sources(glm INTERFACE ${GLM_DIR}/glm/glm.hpp)
+target_include_directories(glm INTERFACE ${GLM_DIR})
+message(STATUS "Included header-only library: glm.")
