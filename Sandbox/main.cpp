@@ -1,4 +1,5 @@
 #include <Iridescent.h>
+#include "imgui.h"
 
 class IridLayer : public Iridescent::Layer
 {
@@ -13,6 +14,13 @@ public:
         if (Iridescent::Input::IsKeyPressed(IRID_KEY_TAB))
 			IRID_TRACE("Tab key is pressed (poll)!");
     }
+
+    virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
+	}
 
     void OnEvent(Iridescent::Event& event) override
     {
@@ -33,7 +41,6 @@ public:
 	Sandbox()
 	{
         PushLayer(new IridLayer());
-        PushOverlay(new Iridescent::ImGuiLayer());
 	}
 
 	~Sandbox()
