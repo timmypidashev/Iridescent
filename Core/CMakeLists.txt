@@ -59,6 +59,8 @@ set(SOURCE_FILES
     ImGui/ImGuiLayer.h
 
     # Renderer
+    Renderer/Shader.cpp
+    Renderer/Shader.h
     Renderer/GraphicsContext.h
 
     # Platform
