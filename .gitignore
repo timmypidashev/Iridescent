@@ -46,3 +46,6 @@ Build
 # Ignore scripts copied to root dir for ease of access
 build.sh
 configure.sh
+
+# imgui files
+imgui.ini
