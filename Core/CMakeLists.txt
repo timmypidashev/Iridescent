@@ -57,6 +57,14 @@ set(SOURCE_FILES
     ImGui/ImGuiBuild.cpp
     ImGui/ImGuiLayer.cpp
     ImGui/ImGuiLayer.h
+
+    # Renderer
+    Renderer/GraphicsContext.h
+
+    # Platform
+    Platform/OpenGL/OpenGLContext.cpp
+    Platform/OpenGL/OpenGLContext.h
+
 )
 
 # Add library sources

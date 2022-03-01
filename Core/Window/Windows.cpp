@@ -6,6 +6,8 @@
 #include "Events/MouseEvent.h"
 #include "Events/KeyEvent.h"
 
+#include "Platform/OpenGL/OpenGLContext.h"
+
 namespace Iridescent {
 	
 	static bool s_GLFWInitialized = false;
@@ -48,7 +50,10 @@ namespace Iridescent {
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
+
+		m_Context = new OpenGLContext(m_Window);
+		m_Context->Init();
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
@@ -97,7 +102,7 @@ namespace Iridescent {
 			}
 		});
 
-        glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
@@ -151,7 +156,7 @@ namespace Iridescent {
 	void Windows::OnUpdate()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+		m_Context->SwapBuffers();
 	}
 
 	void Windows::SetVSync(bool enabled)
