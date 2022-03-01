@@ -2,6 +2,8 @@
 // -----------------------
 #pragma once
 
+#include <glad/glad.h>
+
 // Platform Specific Includes
 #ifdef TARGET_PLATFORM_WINDOWS
     #include <Windows.h>

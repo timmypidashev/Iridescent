@@ -1,9 +1,10 @@
 #include "Iridpch.h"
 #include "OpenGLContext.h"
+#include "Logger/Log.h"
 
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
-#include <GL/GL.h>
+#include <GL/gl.h>
 
 namespace Iridescent {
 
