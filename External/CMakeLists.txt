@@ -25,12 +25,8 @@ set_target_properties(glfw PROPERTIES FOLDER External)
 
 # glad
 # ----------------------------------
-set(GLAD_INSTALL OFF CACHE BOOL "" FORCE)
-set(GLAD_PROFILE "core" CACHE STRING "" FORCE)
-set(GLAD_ALL_EXTENSIONS ON CACHE STRING "" FORCE)
 add_subdirectory(glad)
 set_target_properties(glad PROPERTIES FOLDER External)
-set_target_properties(glad-generate-files PROPERTIES FOLDER External)
 
 # imgui
 # ----------------------------------
