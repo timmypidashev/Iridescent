@@ -1,7 +1,7 @@
 #include <Iridpch.h>
 #include "Logger/Log.h"
 #include "Application.h"
-#include <GLFW/glfw3.h>
+#include <GLFW/glfw3.h> // TODO: figure out a way to change this to glad if needed
 #include "Input/Input.h"
 
 namespace Iridescent {
