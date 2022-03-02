@@ -60,12 +60,19 @@ set(SOURCE_FILES
 
     # Renderer
     Renderer/Shader.cpp
+    Renderer/Renderer.cpp
+    Renderer/Buffer.cpp
     Renderer/Shader.h
     Renderer/GraphicsContext.h
+    Renderer/Renderer.h
+    Renderer/Buffer.h
+
 
     # Platform
     Platform/OpenGL/OpenGLContext.cpp
+    Platform/OpenGL/OpenGLBuffer.cpp
     Platform/OpenGL/OpenGLContext.h
+    Platform/OpenGL/OpenGLBuffer.h
 
 )
 
