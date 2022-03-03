@@ -62,6 +62,8 @@ set(SOURCE_FILES
     Renderer/Shader.cpp
     Renderer/Renderer.cpp
     Renderer/Buffer.cpp
+    Renderer/VertexArray.cpp
+    Renderer/VertexArray.h
     Renderer/Shader.h
     Renderer/GraphicsContext.h
     Renderer/Renderer.h
@@ -71,6 +73,8 @@ set(SOURCE_FILES
     # Platform
     Platform/OpenGL/OpenGLContext.cpp
     Platform/OpenGL/OpenGLBuffer.cpp
+    Platform/OpenGL/OpenGLVertexArray.cpp
+    Platform/OpenGL/OpenGLVertexArray.h
     Platform/OpenGL/OpenGLContext.h
     Platform/OpenGL/OpenGLBuffer.h
 
