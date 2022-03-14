@@ -12,5 +12,5 @@
     url = https://github.com/Dav1dde/glad
 [submodule "External/imgui"]
 	path = External/imgui
-    url = https://github.com/ocornut/imgui
-    branch = docking
+	url = https://github.com/ocornut/imgui
+	branch = docking
