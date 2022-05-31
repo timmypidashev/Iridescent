@@ -1,4 +1,4 @@
-[![wakatime](https://wakatime.com/badge/github/timmypidashev/Iridescent.svg)](https://wakatime.com/badge/github/timmypidashev/Iridescent)
+[![wakatime](https://wakatime.com/badge/user/b920b284-3cde-4cd4-b72e-f7f22d050b16/project/63021d52-4725-4929-90fc-a42aab0fe464.svg)](https://wakatime.com/badge/user/b920b284-3cde-4cd4-b72e-f7f22d050b16/project/63021d52-4725-4929-90fc-a42aab0fe464)
 # Iridescent
 A open-source graphics engine. | Created as a senior project.
 
